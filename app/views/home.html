@@ -1,4 +1,17 @@
 <md-content layout-padding>
  <h1>Home Page</h1>
- <p ng-repeat="list in test">{{list.name}}</p>
+ <div layout="row">
+   <md-card ng-repeat="golfer in golfers | orderBy:'hdcp'" flex="33" >
+        <md-card-title>
+          <md-card-title-text>
+            <span class="md-headline">{{golfer.name}}</span>
+            <span class="md-subhead">HDCP: {{golfer.hdcp}}</span>
+          </md-card-title-text>
+        </md-card-title>
+        <md-card-actions layout="row" layout-align="end center">
+          <md-button ui-sref="golfer({ id: golfer.id })">View Profile</md-button>
+        </md-card-actions>
+      </md-card>
+
+ </row>
 </md-content>

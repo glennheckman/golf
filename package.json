@@ -4,6 +4,7 @@
   "description": "This project has two goals: 1) Serve as a platform to teach myself AngularJS and other modern web tech 2) Build an app that will manage every round of golf my friends and I play, and use that data to visualize trends, scoring, and other fun stuff we decide to track.",
   "main": "index.html",
   "dependencies": {
+    "@uirouter/angularjs": "^1.0.5",
     "angular": "^1.5.8",
     "angular-animate": "^1.5.8",
     "angular-aria": "^1.5.8",
@@ -11,7 +12,6 @@
     "angular-messages": "^1.5.8",
     "angular-moment": "^1.0.0",
     "angular-socket-io": "^0.7.0",
-    "angular-ui-router": "^1.0.0-beta.2",
     "body-parser": "^1.15.2",
     "express": "^4.14.0",
     "moment": "^2.15.1",
