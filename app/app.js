@@ -12,12 +12,9 @@
 	{
 	  	$mdThemingProvider
 		  	.theme('default')
-				.primaryPalette('green')
-	    	.accentPalette('light-blue');
-
-	    $mdThemingProvider
-	    	.theme('notification')
-	    	.backgroundPalette('grey').dark();
+				.primaryPalette('light-green')
+	    	.accentPalette('blue')
+				//.dark();
   });
 
 })();

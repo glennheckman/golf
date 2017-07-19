@@ -8,6 +8,10 @@ angular
 			GolferFactory
 		){
 
-	$scope.golfers = GolferFactory.get_golfers();
+			$scope.golfers;
+			GolferFactory.get_golfers().then(function(response){
+				$scope.golfers = response;
+				console.log("Response", response);
+			});
 
 }]);

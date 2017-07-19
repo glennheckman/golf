@@ -1,11 +1,11 @@
 <md-content layout-padding>
- <h1>Home Page</h1>
+ <h1>Golfers</h1>
  <div layout="row">
-   <md-card ng-repeat="golfer in golfers | orderBy:'hdcp'" flex="33" >
+   <md-card ng-repeat="golfer in golfers | orderBy:'handicap'" flex="33" >
         <md-card-title>
           <md-card-title-text>
             <span class="md-headline">{{golfer.name}}</span>
-            <span class="md-subhead">HDCP: {{golfer.hdcp}}</span>
+            <span class="md-subhead">HDCP: {{golfer.handicap}}</span>
           </md-card-title-text>
         </md-card-title>
         <md-card-actions layout="row" layout-align="end center">

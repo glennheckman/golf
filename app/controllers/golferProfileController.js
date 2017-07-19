@@ -10,10 +10,17 @@ angular
 			GolferFactory
 		){
 
-	$scope.golfer = null;
+	$scope.golfer;
+	$scope.rounds;
 
 	GolferFactory.get_golfer_by_id($stateParams.id).then(function(response){
+		console.log("GOLFER: ",response)
 		$scope.golfer = response;
+	});
+
+	GolferFactory.get_golfer_rounds($stateParams.id).then(function(response){
+		console.log("GOLFER: ",response)
+		$scope.rounds = response;
 	});
 
 }]);
