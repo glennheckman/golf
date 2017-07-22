@@ -1,7 +1,9 @@
-angular.module('GST').config(function($stateProvider, $urlRouterProvider)
-{
-  //, $locationProvider
-	$urlRouterProvider.otherwise('/');
+angular.module('GST').config(function(
+    $stateProvider,
+    $urlRouterProvider
+  ){
+
+  $urlRouterProvider.otherwise('/');
 
 	$stateProvider
 
@@ -15,13 +17,18 @@ angular.module('GST').config(function($stateProvider, $urlRouterProvider)
       templateUrl : 'app/views/rounds.html',
       controller: 'roundController'
     })
-    .state('scores', {
-      url:'/scores',
-      templateUrl : 'app/views/scores.html',
-      controller  : 'scoreController'
+    .state('scorecard', {
+      url:'/scorecard/:roundID',
+      templateUrl : 'app/views/scorecard.html',
+      controller  : 'scorecardController',
+      resolve: {
+        scorecard: function($stateParams, RoundsFactory) {
+          return RoundsFactory.get_holes_for_round($stateParams.roundID);
+        }
+      }
     })
     .state('golfer', {
-      url:'/golfer/:id',
+      url:'/golfer/:gid',
       templateUrl : 'app/views/golfer.profile.html',
       controller  : 'golferProfileController'
     })

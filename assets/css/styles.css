@@ -1,0 +1,19 @@
+#scorecard .hole{
+  border: solid 1px black;
+  background-color: #FFFF99;
+  display: inline-block;
+  min-width: 50px;
+  font-size: 40px;
+  text-align: center;
+  padding: 6px;
+}
+
+#scorecard .nineTotal{
+  background-color: #3333FF;
+  color:#FFF;
+}
+
+#scorecard .eighteenTotal{
+  background-color: #FF33FF;
+  color:#FFF;
+}

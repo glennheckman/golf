@@ -1,0 +1,45 @@
+<div layout-padding>
+  <h1>Scorecard</h1>
+
+
+  <md-button ui-sref="rounds/"><i class="material-icons">arrow_back</i>Rounds</md-button>
+
+
+  <!-- card -->
+  <div id="scorecard">
+    <!-- front nine -->
+    <h4>Front</h4>
+    <div class="row">
+      <!-- holes -->
+      <p>{{holes}}</p>
+      <gst-scorecard-hole hole="holes[0]"></gst-scorecard-hole>
+      <gst-scorecard-hole hole="holes[1]"></gst-scorecard-hole>
+      <gst-scorecard-hole hole="holes[2]"></gst-scorecard-hole>
+      <gst-scorecard-hole hole="holes[3]"></gst-scorecard-hole>
+      <gst-scorecard-hole hole="holes[4]"></gst-scorecard-hole>
+      <gst-scorecard-hole hole="holes[5]"></gst-scorecard-hole>
+      <gst-scorecard-hole hole="holes[6]"></gst-scorecard-hole>
+      <gst-scorecard-hole hole="holes[7]"></gst-scorecard-hole>
+      <gst-scorecard-hole hole="holes[8]"></gst-scorecard-hole>
+      <div class="hole nineTotal">{{front_nine_score}}</div>
+    </div>
+
+    <!-- back nine -->
+    <h4>Back</h4>
+    <div class="row">
+      <!-- holes -->
+      <gst-scorecard-hole hole="holes[9]"></gst-scorecard-hole>
+      <gst-scorecard-hole hole="holes[10]"></gst-scorecard-hole>
+      <gst-scorecard-hole hole="holes[11]"></gst-scorecard-hole>
+      <gst-scorecard-hole hole="holes[12]"></gst-scorecard-hole>
+      <gst-scorecard-hole hole="holes[13]"></gst-scorecard-hole>
+      <gst-scorecard-hole hole="holes[14]"></gst-scorecard-hole>
+      <gst-scorecard-hole hole="holes[15]"></gst-scorecard-hole>
+      <gst-scorecard-hole hole="holes[16]"></gst-scorecard-hole>
+      <gst-scorecard-hole hole="holes[17]"></gst-scorecard-hole>
+      <div class="hole nineTotal">{{back_nine_score}}</div>
+      <div class="hole eighteenTotal">{{final_score}}</div>
+    </div>
+
+  </div>
+</div>

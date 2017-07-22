@@ -1,7 +1,12 @@
 <md-content layout-padding>
  <h1>Golfers</h1>
  <div layout="row">
-   <md-card ng-repeat="golfer in golfers | orderBy:'handicap'" flex="33" >
+   <md-card ng-repeat="golfer in golfers | orderBy:'handicap'"
+    flex-xs="100"
+    flex-sm="33"
+    flex-md="25"
+    flex-gt-md="20"
+    >
         <md-card-title>
           <md-card-title-text>
             <span class="md-headline">{{golfer.name}}</span>
@@ -9,7 +14,7 @@
           </md-card-title-text>
         </md-card-title>
         <md-card-actions layout="row" layout-align="end center">
-          <md-button ui-sref="golfer({ id: golfer.id })">View Profile</md-button>
+          <md-button ui-sref="golfer({ gid: golfer.id })">View Profile</md-button>
         </md-card-actions>
       </md-card>
 
