@@ -59,13 +59,12 @@ angular
 			    );
 		  },
 
-		  // When user stop the typing get_data() is called
 			get_rounds: function(){
 				return $http.get('/api/rounds');
 			},
 
-			get_rounds_for_golfer: function(req){
-				console.log("Get rounds for GID: " + req.id);
+			get_rounds_for_golfer: function(gid){
+				console.log("Get rounds for GID: " + gid);
 				// $http.post('/api/rounds_for_golfer', req)
 				// 	.success(function(response, status, headers, config){
 				// 		console.log("received golfer rounds: " + response);

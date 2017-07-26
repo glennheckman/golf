@@ -1,13 +1,13 @@
 <div class="hole">
   <div layout="column">
 
-    <div layout="row" style="font-size:14px;">
-      <div>{{hole.putts == undefined ? '-' : hole.putts}}</div>
+    <div layout="row">
+      <div class="fairways">{{hole.drivingAcronym == undefined ? '-' : hole.drivingAcronym}}</div>
       <span flex></span>
-      <div>{{hole.drivingAcronym == undefined ? '-' : hole.drivingAcronym}}</div>
+      <div class="putts">{{hole.putts == undefined ? '-' : hole.putts}}</div>
     </div>
 
-    <div>{{hole.score == undefined ? '-' : hole.score}}</div>
+    <div class="score">{{hole.score == undefined ? '-' : hole.score}}</div>
 
   </div>
 </div>

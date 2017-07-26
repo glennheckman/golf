@@ -14,12 +14,10 @@ angular
 	$scope.rounds;
 
 	GolferFactory.get_golfer_by_id($stateParams.gid).then(function(response){
-		console.log("GOLFER: ",response)
 		$scope.golfer = response;
 	});
 
 	GolferFactory.get_golfer_rounds($stateParams.gid).then(function(response){
-		console.log("GOLFER: ",response)
 		$scope.rounds = response;
 	});
 

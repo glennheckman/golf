@@ -1,14 +1,12 @@
 angular
 	.module("GST")
-	.controller('scorecardController',[
+	.controller('roundController',[
 		'$scope',
 		'scorecard',
 		function(
 			$scope,
 			scorecard
 		){
-
-	$scope.holes = scorecard;
-
+			$scope.scorecard = scorecard;
 
 }]);

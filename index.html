@@ -18,9 +18,10 @@
     </div>
   </md-toolbar>
 
-  <md-content ui-view id="main_content" ng-cloak></md-content>
+  <md-content ui-view="main_content" ng-cloak></md-content>
 
   <!-- Vendor -->
+
   <script src="node_modules/angular/angular.js"></script>
   <script src="node_modules/angular-aria/angular-aria.js"></script>
   <script src="node_modules/angular-animate/angular-animate.js"></script>
@@ -38,16 +39,19 @@
 
   <!-- Directives -->
   <script src="app/directives/gst-scorecard-hole/gst.scorecard.hole.directive.js"></script>
+  <script src="app/directives/gst-scorecard/gst.scorecard.directive.js"></script>
+  <script src="app/directives/gst-scorecard/gst.scorecard.directive.controller.js"></script>
 
   <!-- Controllers -->
-  <script src="app/controllers/MainController.js"></script>
-  <script src="app/controllers/roundController.js"></script>
-  <script src="app/controllers/golferProfileController.js"></script>
-  <script src="app/controllers/scorecardController.js"></script>
+  <script src="app/controllers/main.controller.js"></script>
+  <script src="app/controllers/rounds.controller.js"></script>
+  <script src="app/controllers/round.controller.js"></script>
+  <script src="app/controllers/golfer.profile.controller.js"></script>
+  <script src="app/controllers/golfers.controller.js"></script>
 
   <!-- Services -->
-  <script src="app/services/roundsFactory.js"></script>
-  <script src="app/services/golferFactory.js"></script>
+  <script src="app/services/rounds.factory.js"></script>
+  <script src="app/services/golfer.factory.js"></script>
 
 </body>
 </html>
