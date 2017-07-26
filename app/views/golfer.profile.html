@@ -1,7 +1,7 @@
-<md-content layout-padding>
+<div layout-padding>
  <h1>Golfer</h1>
 
-  <md-button ui-sref="/"><i class="material-icons">arrow_back</i>Golfers</md-button>
+  <md-button ui-sref="golfers"><i class="material-icons">arrow_back</i>Golfers</md-button>
 
   <md-card flex>
      <md-card-title>
@@ -13,21 +13,7 @@
    </md-card>
 
    <md-divider></md-divider>
-   <h1>Rounds</h1>
-   <div ng-if="rounds.length==0">{{golfer.name.split(" ")[0]}} has not entered any rounds yet.</div>
-   <div layout="row">
-     <md-card ng-repeat="round in rounds" flex=50>
-        <md-card-title>
-          <md-card-title-text>
-            <span class="md-headline">{{round.courseName}}</span>
-            <span class="md-subhead">Tee Time: {{round.teeTime}}</span>
-            <span class="md-subhead">Score: {{round.score}}</span>
-            <span class="md-subhead">Putts: {{round.putts}}</span>
-          </md-card-title-text>
-        </md-card-title>
-      </md-card>
-    </div>
 
+  <md-content ui-view="golfer_content" ng-cloak></md-content>
 
-
-</md-content>
+</div>

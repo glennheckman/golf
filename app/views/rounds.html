@@ -1,11 +1,20 @@
-<md-content layout-padding>
- <h1>Rounds</h1>
- <div ng-repeat="round in rounds">
-
-	<h4>Golfer: {{round.name}}</h4>
-	<div>Handicap: {{round.handicap}}</div>
-	<div>{{round}}</div>
-
- </div>
-
-</md-content>
+<div layout-padding>
+   <h1>Rounds</h1>
+   <div ng-if="rounds.length==0">{{golfer.name.split(" ")[0]}} has not entered any rounds yet.</div>
+   <div layout="row">
+     <md-card ng-repeat="round in rounds" flex-xs="100" flex-sm="50" flex-md="33" flex-gt-md="25">
+        <md-card-title>
+          <md-card-title-text>
+            <span class="md-headline">{{round.courseName}}</span>
+            <span class="md-subhead">Tee Time: {{round.teeTime}}</span>
+            <span class="md-subhead">Score: {{round.score}}</span>
+            <span class="md-subhead">Putts: {{round.putts}}</span>
+            <span class="md-subhead">Fairways: {{round.fairways}}</span>
+          </md-card-title-text>
+        </md-card-title>
+        <md-card-actions layout="row" layout-align="end center">
+          <md-button ui-sref="golfer.round({ roundID: round.id })">View Round</md-button>
+        </md-card-actions>
+      </md-card>
+    </div>
+</div>

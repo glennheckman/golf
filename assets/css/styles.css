@@ -1,0 +1,36 @@
+#scorecard .hole{
+  border: solid 1px black;
+  background-color: #FFFF99;
+  display: inline-block;
+  min-width: 60px;
+  font-size: 30px;
+  text-align: center;
+}
+
+#scorecard .hole .score{
+  padding: 0 10px;
+}
+
+#scorecard .hole .putts{
+  border-left: solid 1px black;
+  border-bottom: solid 1px black;
+  padding: 4px;
+  font-size:16px;
+}
+
+#scorecard .hole .fairways{
+  border-right: solid 1px black;
+  border-bottom: solid 1px black;
+  padding: 4px;
+  font-size:16px;
+}
+
+#scorecard .nineTotal{
+  background-color: #3333FF;
+  color:#FFF;
+}
+
+#scorecard .eighteenTotal{
+  background-color: #FF33FF;
+  color:#FFF;
+}

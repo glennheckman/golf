@@ -3,14 +3,15 @@ angular
 	.factory('RoundsFactory', [
 		'$http',
 		'$mdToast',
+		'$q',
 		function(
 			$http,
-			$mdToast
+			$mdToast,
+			$q
 		){
 
 		var factory = {
 
-			rounds: [],
 			add_course_hole: function(hole){
 				console.log("add hole: " + hole.holeNumber);
         $http.post('/api/course_holes', hole)
@@ -23,8 +24,7 @@ angular
 	  	},
 
 			addRound: function(score){
-		 		// add notification to notifications database, for appearance in messaging panel.
-	 			var round = {
+		 		var round = {
 	        	id: null,
 	        	score: score
 	        };
@@ -59,18 +59,33 @@ angular
 			    );
 		  },
 
-		  // When user stop the typing get_data() is called
 			get_rounds: function(){
 				return $http.get('/api/rounds');
 			},
 
-			get_rounds_for_golfer: function(req){
-				console.log("Get rounds for GID: " + req.id);
+			get_rounds_for_golfer: function(gid){
+				console.log("Get rounds for GID: " + gid);
 				// $http.post('/api/rounds_for_golfer', req)
 				// 	.success(function(response, status, headers, config){
 				// 		console.log("received golfer rounds: " + response);
 				// 		return response;
 				// 	});
+			},
+
+			get_holes_for_round: function(roundID){
+				var defer = $q.defer();
+				$http.get('/api/get_holes_for_round',{
+					params: {
+						id: roundID
+					}
+				})
+				.then(function (response){
+					defer.resolve(response.data);
+				},
+				function (error){
+					defer.reject(error);
+	 			});
+				return defer.promise;
 			},
 
 			delete: function(id){
@@ -82,18 +97,6 @@ angular
 					};
 
 				$http(config);
-
-					/*
-					.success(function (data, status, headers, config)
-			        {
-
-			        })
-
-			        .error(function(data, status, header, config)
-			        {
-
-			        });
-			       */
 			}
 
 		};
